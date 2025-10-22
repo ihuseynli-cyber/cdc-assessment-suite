@@ -748,7 +748,7 @@ export default function App(){
                       rows.push([String(idx+1), q.id, bucket, q.type, q.text.replace(/\n/g,' '), your.replace? your.replace(/\n/g,' '):your, correct, ok, it.flagged? 'YES':'NO', it.feedback||'']);
                     });
                     exportCSV(rows, `attempt_${attempt.id}.csv`);
-                  }}><Download className="h-4 w-4 mr-2"/>{i18n[lang].exportCSV]}</Button>
+                  }}><Download className="h-4 w-4 mr-2"/>{i18n[lang].exportCSV}</Button>
                   <Button variant="secondary" onClick={()=> window.print()}><FileText className="h-4 w-4 mr-2"/>Print report</Button>
                   <Button variant="ghost" onClick={()=>{ setAttempt(null); setInProgress(false); }}><RotateCcw className="h-4 w-4 mr-2"/>New</Button>
                 </div>
